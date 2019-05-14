@@ -1,34 +1,47 @@
-# my-library
+# garden-tips
 
-## Project setup
-```
+## Table of Contents
+
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Test](#test)
+4. [Links](#links)
+
+### Installation
+
+Node Version Requirement
+
+Vue CLI requires Node.js version 8.9 or above (8.11.0+ recommended). You can manage multiple versions of Node on the same machine with nvm or nvm-windows
+
+Then, you can install the dependencies.
+
+```bash
+# Install repo dependencies
 npm install
 ```
+### Usage
 
-### Compiles and hot-reloads for development
-```
+```bash
+### Compiles and hot-reloads for local development
 npm run serve
-```
 
-### Compiles and minifies for production
-```
+### Compiles and minifies
 npm run build
 ```
 
-### Run your tests
+### Test
 ```
 npm run test
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Run your unit tests
+or
 ```
 npm run test:unit
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Links
+
+- [Vuex](https://vuex.vuejs.org/)
+- [Vue Router](https://router.vuejs.org/)
+- [Translate](http://kazupon.github.io/vue-i18n/)
+- [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/)
+

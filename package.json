@@ -1,15 +1,22 @@
 {
-  "name": "my-library",
+  "name": "garden-tips",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve:pro": "vue-cli-service serve  --mode production",
+    "serve": "vue-cli-service serve  --mode local",
+    "build:pro": "vue-cli-service build --mode production",
+    "build": "vue-cli-service build --mode local",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "lint:css": "stylelint '**/*.vue' '**/*.scss' '**/*.css' --formatter 'verbose' --maxWarnings 0",
+    "lint:css:fix": "stylelint '**/*.vue' '**/*.scss' '**/*.css' --formatter 'verbose' --maxWarnings 0 --fix",
+    "lint:fix": "npm run lint --fix",
+    "test:unit": "vue-cli-service test:unit",
+    "test": "vue-cli-service test:unit --watchAll --coverage"
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "pre-push": "^0.1.1",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1"
@@ -25,9 +32,20 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-jest": "^22.5.1",
+    "eslint-plugin-vue": "^5.2.2",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
+    "stylelint": "^10.0.1",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-order": "^3.0.0",
+    "stylelint-scss": "^3.6.1",
     "vue-template-compiler": "^2.5.21"
-  }
+  },
+  "prepush": [
+    "lint",
+    "lint:css",
+    "test:unit"
+  ]
 }
