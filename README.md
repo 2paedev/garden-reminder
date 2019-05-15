@@ -1,4 +1,4 @@
-# garden-tips
+# garden-reminder
 
 ## Table of Contents
 
